@@ -5,7 +5,9 @@ Dockefile to build (from source) latest release candidate of redis version three
 
 Build from source redis3 v3 release candidate dockerfile.
 
-allows you to play with new redis clustering functionality in a docker container
+Includes `redis-trib.rb` plus required ruby gems - allows you to play with new redis clustering functionality in a docker containers.
+
+Plays nice with fig.
 
 
 # Build / Pull Image Instructions
@@ -26,3 +28,8 @@ or to pull/fetch a pre-built image:
 the usual redis port `6379` has been "exposed" to allow linking containers
 
 
+# get a shell
+
+`docker run -i -t --rm rednut/docker-redis3-rc:latest bash`
+
+then run various redis commands
